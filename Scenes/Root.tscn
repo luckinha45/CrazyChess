@@ -1,0 +1,178 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scripts/Root.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/chessPieces/Chess_blt60.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/chessPieces/Chess_bdt60.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/chessPieces/Chess_ndt60.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/chessPieces/Chess_qdt60.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/chessPieces/Chess_pdt60.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/chessPieces/Chess_kdt60.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/chessPieces/Chess_rdt60.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/chessPieces/Chess_qlt60.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/chessPieces/Chess_nlt60.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/chessPieces/Chess_klt60.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/chessPieces/Chess_rlt60.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/chessPieces/Chess_plt60.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Piece.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Sprites/boardTiles/BoardTileSet.tres" type="TileSet" id=18]
+
+[node name="Root" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Board" type="TileMap" parent="."]
+position = Vector2( 30, 30 )
+tile_set = ExtResource( 18 )
+cell_size = Vector2( 60, 60 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 1, 1, 0, 0, 2, 1, 0, 3, 0, 0, 4, 1, 0, 5, 0, 0, 6, 1, 0, 7, 0, 0, 65536, 0, 0, 65537, 0, 1, 65538, 0, 0, 65539, 1, 0, 65540, 0, 0, 65541, 1, 0, 65542, 0, 0, 65543, 1, 0, 131072, 0, 1, 131073, 0, 0, 131074, 1, 0, 131075, 0, 0, 131076, 1, 0, 131077, 0, 0, 131078, 1, 0, 131079, 0, 0, 196608, 0, 0, 196609, 0, 1, 196610, 0, 0, 196611, 1, 0, 196612, 0, 0, 196613, 1, 0, 196614, 0, 0, 196615, 1, 0, 262144, 0, 1, 262145, 0, 0, 262146, 1, 0, 262147, 0, 0, 262148, 1, 0, 262149, 0, 0, 262150, 1, 0, 262151, 0, 0, 327680, 0, 0, 327681, 0, 1, 327682, 0, 0, 327683, 1, 0, 327684, 0, 0, 327685, 1, 0, 327686, 0, 0, 327687, 1, 0, 393216, 0, 1, 393217, 0, 0, 393218, 1, 0, 393219, 0, 0, 393220, 1, 0, 393221, 0, 0, 393222, 1, 0, 393223, 0, 0, 458752, 0, 0, 458753, 0, 1, 458754, 0, 0, 458755, 1, 0, 458756, 0, 0, 458757, 1, 0, 458758, 0, 0, 458759, 1, 0 )
+
+[node name="Pieces" type="Node2D" parent="."]
+
+[node name="Blacks" type="Node2D" parent="Pieces"]
+
+[node name="Torre_bk_1" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 60, 60 )
+texture = ExtResource( 10 )
+
+[node name="Cavalo_bk_1" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 120, 60 )
+texture = ExtResource( 6 )
+
+[node name="Bispo_bk_1" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 180, 60 )
+texture = ExtResource( 5 )
+
+[node name="Rainha_bk" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 240, 60 )
+texture = ExtResource( 7 )
+
+[node name="Rei_bk" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 300, 60 )
+texture = ExtResource( 9 )
+
+[node name="Bispo_bk_2" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 360, 60 )
+texture = ExtResource( 5 )
+
+[node name="Cavalo_bk_2" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 420, 60 )
+texture = ExtResource( 6 )
+
+[node name="Torre_bk_2" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 480, 60 )
+texture = ExtResource( 10 )
+
+[node name="Peao_bk_1" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 60, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_2" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 120, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_3" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 180, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_4" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 240, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_5" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 300, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_6" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 360, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_7" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 420, 120 )
+texture = ExtResource( 8 )
+
+[node name="Peao_bk_8" parent="Pieces/Blacks" instance=ExtResource( 16 )]
+position = Vector2( 480, 120 )
+texture = ExtResource( 8 )
+
+[node name="Whites" type="Node2D" parent="Pieces"]
+
+[node name="Torre_w_1" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 60, 480 )
+texture = ExtResource( 14 )
+team = 1
+
+[node name="Cavalo_w_1" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 120, 480 )
+texture = ExtResource( 12 )
+team = 1
+
+[node name="Bispo_w_1" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 180, 480 )
+texture = ExtResource( 4 )
+team = 1
+
+[node name="Rainha_w" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 240, 480 )
+texture = ExtResource( 11 )
+team = 1
+
+[node name="Rei_w" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 300, 480 )
+texture = ExtResource( 13 )
+team = 1
+
+[node name="Bispo_w_2" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 360, 480 )
+texture = ExtResource( 4 )
+team = 1
+
+[node name="Cavalo_w_2" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 420, 480 )
+texture = ExtResource( 12 )
+team = 1
+
+[node name="Torre_w_2" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 480, 480 )
+texture = ExtResource( 14 )
+team = 1
+
+[node name="Peao_w_1" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 60, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_2" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 120, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_3" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 180, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_4" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 240, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_5" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 300, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_6" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 360, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_7" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 420, 420 )
+texture = ExtResource( 15 )
+team = 1
+
+[node name="Peao_w_8" parent="Pieces/Whites" instance=ExtResource( 16 )]
+position = Vector2( 480, 420 )
+texture = ExtResource( 15 )
+team = 1
